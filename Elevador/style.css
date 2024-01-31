@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .building {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; /* Para alinhar o prédio na parte inferior */
+    height: 80vh;
+    background-color: #ecf0f1;
+    border: 5px solid #bdc3c7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  /* Estilo do prédio (cada andar) */
+  .floor {
+    width: 120px;
+    height: 60px;
+    background-color: #95a5a6;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo do elevador */
+  .elevator-shaft {
+    display: flex;
+    align-items: flex-end; /* Para alinhar o elevador na parte inferior do andar */
+  }
+  
+  .elevator {
+    width: 100px;
+    height: 60px;
+    background-color: #3498db;
+    transition: 0.5s;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .call-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .call-button:hover {
+    background-color: #2980b9;
+  }
+  

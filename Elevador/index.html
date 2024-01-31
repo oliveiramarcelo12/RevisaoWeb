@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Elevador</title>
+</head>
+<body>
+    <div class="building">
+          <!-- Estrutura do prédio -->
+          <div class="floor" id="floor6">
+            <button class="floor-button" onclick="callElevator(6)"><img src="up-arrow.png" alt="Up Arrow"></button>
+          </div>
+    <div class="elevator-shaft">
+      <div class="elevator" id="elevator"></div>
+    </div>
+  </div>
+  <div class="floor"></div>
+  <div class="floor"></div>
+  <div class="floor"></div>
+  <div class="floor"></div>
+  <div class="floor"></div>
+  <div class="floor"></div>
+  <div class="floor"></div>
+  <div class="floor"></div>
+
+        <div class="floor" onclick="callElevator(6)">6</div>
+        <div class="floor" onclick="callElevator(5)">5</div>
+        <div class="floor" onclick="callElevator(4)">4</div>
+        <div class="floor" onclick="callElevator(3)">3</div>
+        <div class="floor" onclick="callElevator(2)">2</div>
+        <div class="floor" onclick="callElevator(1)">1</div>
+        <div class="floor" onclick="callElevator(0)">0</div>
+        <div class="floor" onclick="callElevator(-1)">Sub1</div>
+        <div class="floor" onclick="callElevator(-2)">Sub2</div>
+        <button class="call-button" onclick="callElevatorBoth()">Chamar Elevador</button>
+        <div class="elevator-shaft">
+          <div class="elevator" id="elevator1"></div>
+          <div class="elevator" id="elevator2"></div>
+        </div>
+      </div>
+      
+      <script src="script.js"></script>
+</body>
+</html>
