@@ -1,66 +1,75 @@
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .building {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end; /* Para alinhar o prédio na parte inferior */
-    height: 80vh;
-    background-color: #ecf0f1;
-    border: 5px solid #bdc3c7;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  /* Estilo do prédio (cada andar) */
-  .floor {
-    width: 120px;
-    height: 60px;
-    background-color: #95a5a6;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Estilo do elevador */
-  .elevator-shaft {
-    display: flex;
-    align-items: flex-end; /* Para alinhar o elevador na parte inferior do andar */
-  }
-  
-  .elevator {
-    width: 100px;
-    height: 60px;
-    background-color: #3498db;
-    transition: 0.5s;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .call-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .call-button:hover {
-    background-color: #2980b9;
-  }
-  
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 135vh;
+  background-color: #f0f0f0; /* Cor de fundo, ajuste conforme necessário */
+}
+
+.container {
+  text-align: center;
+}
+
+.building {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ddd; /* Cor do prédio, ajuste conforme necessário */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra para efeito tridimensional */
+  text-align: center; /* Centralizar o prédio na tela */
+}
+
+.floor {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.elevator {
+  width: 40px;
+  height: 60px;
+  background-color: #3498db; /* Cor do elevador, ajuste conforme necessário */
+  position: relative;
+  margin: 0 10px;
+}
+
+.door {
+  width: 20px;
+  height: 60px;
+  background-color: #2c3e50; /* Cor da porta do elevador, ajuste conforme necessário */
+  position: absolute;
+  top: 0;
+  transition: 0.5s; /* Animação de abertura/fechamento da porta */
+}
+
+.floor-indicator {
+  margin-left: 10px;
+}
+
+.round-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #2ecc71; /* Cor do botão, ajuste conforme necessário */
+  color: #fff;
+  border: none;
+  margin-right: 10px;
+}
+
+.gray-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #95a5a6; /* Cor do botão cinza, ajuste conforme necessário */
+  border: none;
+  margin-right: 10px;
+}
+
+/* Adicione a regra hover para mudar a cor do botão cinza quando clicado */
+.gray-button:hover {
+  background-color: #e74c3c; /* Cor vermelha quando o botão cinza é clicado */
+}

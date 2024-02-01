@@ -1,46 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Elevador</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Desenho do Prédio</title>
 </head>
 <body>
-    <div class="building">
-          <!-- Estrutura do prédio -->
-          <div class="floor" id="floor6">
-            <button class="floor-button" onclick="callElevator(6)"><img src="up-arrow.png" alt="Up Arrow"></button>
-          </div>
-    <div class="elevator-shaft">
-      <div class="elevator" id="elevator"></div>
-    </div>
-  </div>
-  <div class="floor"></div>
-  <div class="floor"></div>
-  <div class="floor"></div>
-  <div class="floor"></div>
-  <div class="floor"></div>
-  <div class="floor"></div>
-  <div class="floor"></div>
-  <div class="floor"></div>
 
-        <div class="floor" onclick="callElevator(6)">6</div>
-        <div class="floor" onclick="callElevator(5)">5</div>
-        <div class="floor" onclick="callElevator(4)">4</div>
-        <div class="floor" onclick="callElevator(3)">3</div>
-        <div class="floor" onclick="callElevator(2)">2</div>
-        <div class="floor" onclick="callElevator(1)">1</div>
-        <div class="floor" onclick="callElevator(0)">0</div>
-        <div class="floor" onclick="callElevator(-1)">Sub1</div>
-        <div class="floor" onclick="callElevator(-2)">Sub2</div>
-        <button class="call-button" onclick="callElevatorBoth()">Chamar Elevador</button>
-        <div class="elevator-shaft">
-          <div class="elevator" id="elevator1"></div>
-          <div class="elevator" id="elevator2"></div>
-        </div>
-      </div>
-      
-      <script src="script.js"></script>
+<div class="building">
+
+  <div class="floor" id="floor6">
+    <div class="elevator left" id="elevator1">
+      <div class="door left" id="door1-left"></div>
+      <div class="door right" id="door1-right"></div>
+    </div>
+    <div class="elevator right" id="elevator2">
+      <div class="door left" id="door2-left"></div>
+      <div class="door right" id="door2-right"></div>
+    </div>
+    <button class="round-button" onclick="callElevatorFromFloor(6)"></button>
+    <span></span>
+    <div class="floor-indicator">6</div>
+  </div>
+  <div class="floor" id="floor5">
+    <div class="elevator left" id="elevator1">
+      <div class="door left" id="door1-left"></div>
+      <div class="door right" id="door1-right"></div>
+    </div>
+    <div class="elevator right" id="elevator2">
+      <div class="door left" id="door2-left"></div>
+      <div class="door right" id="door2-right"></div>
+    </div>
+    <button class="round-button" onclick="callElevatorFromFloor(5)"></button>
+    <span></span>
+    <div class="floor-indicator">5</div>
+  </div>
+
+  <div class="floor" id="floor4">
+    <div class="elevator left" id="elevator1">
+      <div class="door left" id="door1-left"></div>
+      <div class="door right" id="door1-right"></div>
+    </div>
+    <div class="elevator right" id="elevator2">
+      <div class="door left" id="door2-left"></div>
+      <div class="door right" id="door2-right"></div>
+    </div>
+    <button class="round-button" onclick="callElevatorFromFloor(4)"></button>
+    <span></span>
+    <div class="floor-indicator">5</div>
+  </div>
+
+  <div class="floor" id="floor3">
+    <div class="elevator left" id="elevator1">
+      <div class="door left" id="door1-left"></div>
+      <div class="door right" id="door1-right"></div>
+    </div>
+    <div class="elevator right" id="elevator2">
+      <div class="door left" id="door2-left"></div>
+      <div class="door right" id="door2-right"></div>
+    </div>
+    <button class="round-button" onclick="callElevatorFromFloor(3)"></button>
+    <span></span>
+    <div class="floor-indicator">3</div>
+  </div>
+
+
+  <div class="floor" id="floor2">
+    <div class="elevator left" id="elevator1">
+      <div class="door left" id="door1-left"></div>
+      <div class="door right" id="door1-right"></div>
+    </div>
+    <div class="elevator right" id="elevator2">
+      <div class="door left" id="door2-left"></div>
+      <div class="door right" id="door2-right"></div>
+    </div>
+    <button class="round-button" onclick="callElevatorFromFloor(2)"></button>
+    <span></span>
+    <div class="floor-indicator">2</div>
+  </div>
+
+  <div class="floor" id="floor1">
+    <div class="elevator left" id="elevator1">
+      <div class="door left" id="door1-left"></div>
+      <div class="door right" id="door1-right"></div>
+    </div>
+    <div class="elevator right" id="elevator2">
+      <div class="door left" id="door2-left"></div>
+      <div class="door right" id="door2-right"></div>
+    </div>
+    <button class="round-button" onclick="callElevatorFromFloor(1)"></button>
+    <span></span>
+    <div class="floor-indicator">1</div>
+  </div>
+
+  <!-- Adicione a classe da cor específica para cada andar -->
+  <div class="floor" id="floor0">
+    <div class="elevator left" id="elevator1">
+      <div class="door left" id="door1-left"></div>
+      <div class="door right" id="door1-right"></div>
+    </div>
+    <div class="elevator right" id="elevator2">
+      <div class="door left" id="door2-left"></div>
+      <div class="door right" id="door2-right"></div>
+    </div>
+    <button class="round-button" onclick="callElevatorFromFloor(0)"></button>
+    <span></span>
+    <div class="floor-indicator">T</div>
+  </div>
+
+  <div class="floor" id="floor-01">
+    <div class="elevator left" id="elevator1">
+      <div class="door left" id="door1-left"></div>
+      <div class="door right" id="door1-right"></div>
+    </div>
+    <div class="elevator right" id="elevator2">
+      <div class="door left" id="door2-left"></div>
+      <div class="door right" id="door2-right"></div>
+    </div>
+    <button class="round-button" onclick="callElevatorFromFloor(-1)"></button>
+    <span></span>
+    <div class="floor-indicator">S1</div>
+  </div>
+
+<div class="floor" id="floor-01">
+  <div class="elevator left" id="elevator1">
+    <div class="door left" id="door1-left"></div>
+    <div class="door right" id="door1-right"></div>
+  </div>
+  <div class="elevator right" id="elevator2">
+    <div class="door left" id="door2-left"></div>
+    <div class="door right" id="door2-right"></div>
+  </div>
+  <div class="floor-indicator">S1</div>
+</div>
+
+<div class="floor" id="floor-02">
+  <div class="elevator left" id="elevator1">
+    <div class="door left" id="door1-left"></div>
+    <div class="door right" id="door1-right"></div>
+  </div>
+  <div class="elevator right" id="elevator2">
+    <div class="door left" id="door2-left"></div>
+    <div class="door right" id="door2-right"></div>
+  </div>
+  <div class="floor-indicator">S2</div>
+</div>
+
+
+<button class="gray-button" onclick="toggleRed()">Botão</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
