@@ -73,3 +73,66 @@ body {
 .gray-button:hover {
   background-color: #e74c3c; /* Cor vermelha quando o botão cinza é clicado */
 }
+/* Adicione as seguintes regras CSS para estilizar os botões */
+.round-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: gray;
+  margin-right: 5px; /* Ajuste conforme necessário */
+}
+
+.round-button:hover {
+  cursor: pointer;
+}
+.elevator-move {
+  transition: transform 1s ease-in-out;
+}
+
+.elevator-moving {
+  animation: elevatorDoorAnimation 1s ease-in-out;
+  margin-right: 20px; /* Adapte a margem conforme necessário */
+}
+
+.door-closed {
+  animation: closeDoorAnimation 0.5s ease-in-out;
+}
+
+@keyframes elevatorDoorAnimation {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes closeDoorAnimation {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+.door-left,
+.door-right {
+  transition: left 1s, right 1s;
+}
+
+.door-open-left {
+  left: -25px;
+}
+
+.door-open-right {
+  right: -25px;
+}
+
+.door-closed-left {
+  left: 0;
+}
+
+.door-closed-right {
+  right: 0;
+}
